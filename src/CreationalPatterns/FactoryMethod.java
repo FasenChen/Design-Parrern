@@ -54,17 +54,17 @@ interface Shape{
     void show();
 }
 interface Factory{
-    BehavioralPatterns.Shape createShape();
+    Shape createShape();
 }
 
-class CircleShape implements BehavioralPatterns.Shape {
+class CircleShape implements Shape {
     @Override
     public void show(){
         System.out.println("Circle Block");
     }
 }
 
-class SquareShape implements BehavioralPatterns.Shape {
+class SquareShape implements Shape {
     @Override
     public void show(){
         System.out.println("Square Block");
@@ -73,14 +73,14 @@ class SquareShape implements BehavioralPatterns.Shape {
 
 class CircleFactory implements Factory {
     @Override
-    public BehavioralPatterns.Shape createShape() {
+    public Shape createShape() {
         return new CircleShape();
     }
 }
 
 class SquareFactory implements Factory {
     @Override
-    public BehavioralPatterns.Shape createShape() {
+    public Shape createShape() {
         return new SquareShape();
     }
 }
